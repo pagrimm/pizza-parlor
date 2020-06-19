@@ -3,7 +3,19 @@ h1 {
   color: #e33b7e;
 }
 
-h1 i {
+hr {
+  border-top: 1px solid #222;
+}
+
+.card-header h4 {
+  margin: 0;
+}
+
+.cart-hidden {
+  display: none;
+}
+
+i {
   color: #99e64c
 }
 
@@ -23,3 +35,16 @@ h1 i {
   color: #e33b7e
 }
 
+.btn-primary {
+  color: #222;
+  background-color: #99e64c;
+  border-color: #99e64c;
+}
+
+.text-green {
+  color: #99e64c
+}
+
+.pizza-cart-container {
+  display: none;
+}
