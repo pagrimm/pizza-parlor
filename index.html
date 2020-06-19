@@ -22,20 +22,21 @@
           <form id="pizza-input-form">
             <div class="form-group">
               <h4 class="card-title">Choose pizza size:</h4>
-              <input type="radio" id="size-small" name="size" value="10">
+              <input type="radio" id="size-small" name="size" value="10" required>
               <label for="size-small">Small (11 inches)</label><br>
-              <input type="radio" id="size-medium" name="size" value="14">
+              <input type="radio" id="size-medium" name="size" value="14" required>
               <label for="size-medium">Medium (13 inches)</label><br>
-              <input type="radio" id="size-large" name="size" value="18">
+              <input type="radio" id="size-large" name="size" value="18" required>
               <label for="size-large">Large (17 inches)</label>
             </div>
             <hr>
             <div class="form-group">
               <h4 class="card-title">Amount of cheese:</h4>
-              <select class="form-control" name="cheese" id="input-cheese">
+              <select class="form-control" name="cheese" id="input-cheese" required>
                 <option value="0">Normal cheese</option>
                 <option value="1">Extra cheese</option>
                 <option value="2">Double cheese</option>
+                <option value="0">No cheese</option>
               </select>
             </div>
             <hr>
@@ -83,6 +84,7 @@
           <h6 class="card-title">Tax:  $<span class="tax-cart"></span></h6>
           <h6 class="card-title">Delivery Fee:  $<span class="delivery-fee-cart"></span></h6>
           <h6 class="card-title text-green">Total Price:  $<span class="price-cart"></span></h6>
+          <button type="button" id="reset-button" class="btn btn-secondary">Clear Cart</button>
         </div>
       </section>
     </div>
@@ -92,6 +94,7 @@
     <div class="cart-results pizza-size-cart"></div>
     <div class="cart-results pizza-cheese-cart"></div>
     <div class="cart-results pizza-toppings-cart"></div>
+    <div class="cart-results pizza-price-cart text-green">$</div>
   </div>
 </body>
 </html>

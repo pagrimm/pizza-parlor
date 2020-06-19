@@ -52,6 +52,7 @@ function displayCart(cart) {
     for (n = 0; n < cart.pizzas[i].toppings.length; n++) {
       $(".pizza-toppings-cart").first().append("<div>" + cart.pizzas[i].toppings[n].name + "</div>");
     }
+    $(".pizza-price-cart").first().append(cart.pizzas[i].price.toFixed(2));
   }
   $(".subtotal-cart").text(cart.subTotal.toFixed(2));
   $(".tax-cart").text(cart.totalTax.toFixed(2));

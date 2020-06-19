@@ -33,6 +33,7 @@ form select {
 
 input {
   margin-right: 10px;
+  margin-left: 35px;
 }
 
 .cart-hidden {
@@ -65,6 +66,38 @@ i {
   border-color: #99e64c;
 }
 
+.btn-primary:hover {
+  color: #201f2e;
+  background-color: #669e2e;
+  border-color: #669e2e;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #201f2e;
+  background-color: #669e2e;
+  border-color: #669e2e;
+  -webkit-box-shadow: #201f2e;
+          box-shadow: #201f2e;
+}
+
+.btn-secondary {
+  color: #201f2e;
+  background-color: #e33b7e;
+  border-color: #e33b7e;
+}
+
+.btn-secondary:hover {
+  color: #201f2e;
+  background-color: #931f4e;
+  border-color: #931f4e;
+}
+
+.btn-secondary:focus {
+  color: #201f2e;
+  background-color: #931f4e;
+  border-color: #931f4e;
+}
+
 .text-green {
   color: #99e64c
 }
@@ -79,6 +112,14 @@ i {
 
 .pizza-cart-container i{
   color: #e33b7e;
+}
+
+.pizza-name-cart {
+  margin-bottom: 5px;
+}
+
+.cart-results {
+  margin-left: 35px;
 }
 
 .cart-shown {
