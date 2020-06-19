@@ -1,5 +1,5 @@
 # Pizza Parlor
-**Week 4 Project for Epicodus**
+**Week 4 Project for Epicodus**  
 **By Peter Grimm, 06.19.2020**
 
 ## Description
