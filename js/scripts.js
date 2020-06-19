@@ -2,12 +2,19 @@
 //Cart constructor and prototypes
 function Cart(tax, deliveryFee) {
   this.pizzas = [],
-  this.subtotal = 0,
+  this.subTotal = 0,
   this.tax = tax,
   this.deliveryFee = deliveryFee,
-  this.totalprice = 0
+  this.totalPrice = 0
 }
 
+Cart.prototype.calculatePrice = function() {
+  for (i = 0; i < this.pizzas.length; i++) {
+    this.pizzas[i].calculatePrice();
+    this.subTotal += this.pizzas[i].price;
+  }
+  this.totalPrice = this.subTotal + (this.subTotal * this.tax) + this.deliveryFee;
+}
 
 //Pizza constructor and prototypes
 function Pizza(size, cheese, toppings) {
@@ -30,8 +37,8 @@ function PizzaOption (name, value) {
   this.value = value;
 }
 
-//UI logic
 
+//UI logic
 function getInputs() {
   let inputs = [];
   let size = new PizzaOption($("label[for='" + $("input:radio[name=size]:checked").attr("id") + "']").text(), parseInt($("input:radio[name=size]:checked").val()));
@@ -53,8 +60,7 @@ $(document).ready(function () {
     event.preventDefault();
     let inputs = getInputs();
     let pizza = new Pizza(inputs[0], inputs[1], inputs[2])
-    pizza.calculatePrice();
+    cart.pizzas.push(pizza);
+    cart.calculatePrice();
   });
 });
-
-$("label[for='" + $("input:radio[name=size]:checked").attr("id") + "']").text();
