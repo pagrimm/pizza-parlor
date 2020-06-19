@@ -4,11 +4,27 @@ h1 {
 }
 
 hr {
-  border-top: 1px solid #222;
+  border-top: 1px solid #201f2e;
 }
 
 .card-header h4 {
   margin: 0;
+}
+
+form h4 {
+  color: #9085ad;
+}
+
+form h5 {
+  margin-bottom: 10px;
+}
+
+form select {
+  margin-bottom: 20px;
+}
+
+input {
+  margin-right: 10px;
 }
 
 .cart-hidden {
@@ -36,7 +52,7 @@ i {
 }
 
 .btn-primary {
-  color: #222;
+  color: #201f2e;
   background-color: #99e64c;
   border-color: #99e64c;
 }
@@ -47,4 +63,18 @@ i {
 
 .pizza-cart-container {
   display: none;
+}
+
+.cart-shown {
+  font-size: 1.5rem;
+  color: #52476b
+}
+
+.cart-icon {
+  font-size: 8rem;
+  text-align: center;
+}
+
+.bg-icon {
+  color: #52476b
 }

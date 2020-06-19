@@ -20,44 +20,52 @@
         <div class="card-header bg-purple text-magenta"><h4><i class="fas fa-pizza-slice"></i>  Create Your Pizza</h4></div>
         <div class="card-body">
           <form id="pizza-input-form">
-            <h4 class="card-title">Choose pizza size:</h4>
-            <input type="radio" id="size-small" name="size" value="10">
-            <label for="size-small">Small (11 inches)</label><br>
-            <input type="radio" id="size-medium" name="size" value="14">
-            <label for="size-medium">Medium (13 inches)</label><br>
-            <input type="radio" id="size-large" name="size" value="18">
-            <label for="size-large">Large (17 inches)</label>
+            <div class="form-group">
+              <h4 class="card-title">Choose pizza size:</h4>
+              <input type="radio" id="size-small" name="size" value="10">
+              <label for="size-small">Small (11 inches)</label><br>
+              <input type="radio" id="size-medium" name="size" value="14">
+              <label for="size-medium">Medium (13 inches)</label><br>
+              <input type="radio" id="size-large" name="size" value="18">
+              <label for="size-large">Large (17 inches)</label>
+            </div>
             <hr>
-            <h4 class="card-title">Amount of cheese:</h4>
-            <select name="cheese" id="input-cheese">
-              <option value="0">Normal</option>
-              <option value="1">Extra</option>
-              <option value="2">Double</option>
-            </select>
+            <div class="form-group">
+              <h4 class="card-title">Amount of cheese:</h4>
+              <select class="form-control" name="cheese" id="input-cheese">
+                <option value="0">Normal</option>
+                <option value="1">Extra</option>
+                <option value="2">Double</option>
+              </select>
+            </div>
             <hr>
             <h4 class="card-title">Choose toppings:</h4>
-            <h5>Meat</h5>
-            <input type="checkbox" id="topping-canadian-bacon" name="toppings" value="1">
-            <label for="topping-canadian-bacon">Canadian Bacon</label><br>
-            <input type="checkbox" id="topping-chicken" name="toppings" value="1">
-            <label for="topping-chicken">Chicken</label><br>
-            <input type="checkbox" id="topping-pepperoni" name="toppings" value="1">
-            <label for="topping-pepperoni">Pepperoni</label><br>
-            <input type="checkbox" id="topping-sausage" name="toppings" value="1">
-            <label for="topping-sausage">Sausage</label><br>
-            <h5>Veggies</h5>
-            <input type="checkbox" id="topping-garlic" name="toppings" value="1">
-            <label for="topping-garlic">Garlic</label><br>
-            <input type="checkbox" id="topping-green-pepers" name="toppings" value="1">
-            <label for="topping-green-pepers">Green Peppers</label><br>
-            <input type="checkbox" id="topping-mushrooms" name="toppings" value="1">
-            <label for="topping-mushrooms">Mushrooms</label><br>
-            <input type="checkbox" id="topping-olives" name="toppings" value="1">
-            <label for="topping-olives">Olives</label><br>
-            <input type="checkbox" id="topping-onions" name="toppings" value="1">
-            <label for="topping-onions">Onions</label><br>
-            <input type="checkbox" id="topping-pineapple" name="toppings" value="1">
-            <label for="topping-pineapple">Pineapple</label><br>
+            <div class="form-group">
+              <h5>Meat</h5>
+              <input type="checkbox" id="topping-canadian-bacon" name="toppings" value="1">
+              <label for="topping-canadian-bacon">Canadian Bacon</label><br>
+              <input type="checkbox" id="topping-chicken" name="toppings" value="1">
+              <label for="topping-chicken">Chicken</label><br>
+              <input type="checkbox" id="topping-pepperoni" name="toppings" value="1">
+              <label for="topping-pepperoni">Pepperoni</label><br>
+              <input type="checkbox" id="topping-sausage" name="toppings" value="1">
+              <label for="topping-sausage">Sausage</label><br>
+            </div>
+            <div class="form-group">
+              <h5>Veggies</h5>
+              <input type="checkbox" id="topping-garlic" name="toppings" value="1">
+              <label for="topping-garlic">Garlic</label><br>
+              <input type="checkbox" id="topping-green-pepers" name="toppings" value="1">
+              <label for="topping-green-pepers">Green Peppers</label><br>
+              <input type="checkbox" id="topping-mushrooms" name="toppings" value="1">
+              <label for="topping-mushrooms">Mushrooms</label><br>
+              <input type="checkbox" id="topping-olives" name="toppings" value="1">
+              <label for="topping-olives">Olives</label><br>
+              <input type="checkbox" id="topping-onions" name="toppings" value="1">
+              <label for="topping-onions">Onions</label><br>
+              <input type="checkbox" id="topping-pineapple" name="toppings" value="1">
+              <label for="topping-pineapple">Pineapple</label><br>
+            </div>
             <button id="pizza-submit" type="submit" class="btn btn-primary">Submit</button> 
           </form>
         </div>
@@ -66,13 +74,15 @@
     <div class="col-md-4">
       <section class="card bg-dark-purple mb-3">
         <div class="card-header bg-purple text-magenta"><h4><i class="fas fa-pizza-slice"></i> Your Cart</h4></div>
+        <p class="card-body cart-shown">Cart is empty. Design a pizza to get started!</p>
+        <p class="card-body cart-shown cart-icon"><i class="fas fa-meteor bg-icon"></i></p>
         <div class="cart-container card-body">
         </div>
         <div class="card-body cart-hidden">
           <h6 class="card-title">Subtotal: $<span class="subtotal-cart"></span></h6>
           <h6 class="card-title">Tax: $<span class="tax-cart"></span></h6>
-          <h6 class="card-title">Delivery Fee: $<span class="subtotal-cart"></span></h6>
-          <h6 class="card-title">Delivery Fee: $<span class="price-cart"></span></h6>
+          <h6 class="card-title">Delivery Fee: $<span class="delivery-fee-cart"></span></h6>
+          <h6 class="card-title"><strong>Total Price: $<span class="price-cart"></span></strong></h6>
         </div>
       </section>
     </div>
