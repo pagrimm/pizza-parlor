@@ -1,9 +1,9 @@
 <div class="pizza-cart-container">
   <h4 class="card-title">Pizza</h4>
   <h5 class="card-text">Size</h5>
-  <p class="pizza-size-cart"></p>
+  <p class="cart-results pizza-size-cart"></p>
   <h5 class="card-text">Cheese</h5>
-  <p class="pizza-cheese-cart"></p>
+  <p class="cart-results pizza-cheese-cart"></p>
   <h5 class="card-text">Toppings</h5>
-  <p class="pizza-toppings-cart"></p>
+  <p class="cart-results pizza-toppings-cart"></p>
 </div>

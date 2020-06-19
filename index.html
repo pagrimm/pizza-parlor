@@ -17,42 +17,45 @@
   <section class="card bg-secondary mb-3">
     <div class="card-header"><i class="fas fa-pizza-slice"></i> Create Your Pizza</div>
     <div class="card-body">
-      <h4 class="card-title">Choose a pizza size:</h4>
-      <input type="radio" id="size-small" name="input-size" value="10">
-      <label for="size-small">Small (11 inches)</label><br>
-      <input type="radio" id="size-medium" name="input-size" value="14">
-      <label for="size-medium">Medium (13 inches)</label><br>
-      <input type="radio" id="size-large" name="input-size" value="18">
-      <label for="size-large">Large (17 inches)</label>
-      <h4 class="card-title">Choose amount of cheese:</h4>
-      <select name="cheese" id="input-cheese">
-        <option value="0">Normal</option>
-        <option value="1">Extra</option>
-        <option value="2">Double</option>
-      </select>
-      <h4 class="card-title">Choose toppings:</h4>
-      <h5>Meat</h5>
-      <input type="checkbox" id="topping-canadian-bacon" name="toppings" value="1">
-      <label for="topping-canadian-bacon"> Canadian Bacon</label><br>
-      <input type="checkbox" id="topping-chicken" name="toppings" value="1">
-      <label for="topping-chicken"> Chicken</label><br>
-      <input type="checkbox" id="topping-pepperoni" name="toppings" value="1">
-      <label for="topping-pepperoni"> Pepperoni</label><br>
-      <input type="checkbox" id="topping-sausage" name="toppings" value="1">
-      <label for="topping-sausage"> Sausage</label><br>
-      <h5>Veggies</h5>
-      <input type="checkbox" id="topping-garlic" name="toppings" value="1">
-      <label for="topping-garlic"> Garlic</label><br>
-      <input type="checkbox" id="topping-green-pepers" name="toppings" value="1">
-      <label for="topping-green-pepers"> Green Peppers</label><br>
-      <input type="checkbox" id="topping-mushrooms" name="toppings" value="1">
-      <label for="topping-mushrooms"> Mushrooms</label><br>
-      <input type="checkbox" id="topping-olives" name="toppings" value="1">
-      <label for="topping-olives"> Olives</label><br>
-      <input type="checkbox" id="topping-onions" name="toppings" value="1">
-      <label for="topping-onions"> Onions</label><br>
-      <input type="checkbox" id="topping-pineapple" name="toppings" value="1">
-      <label for="topping-pineapple"> Pineapple</label><br>
+      <form id="pizza-input-form">
+        <h4 class="card-title">Choose a pizza size:</h4>
+        <input type="radio" id="size-small" name="input-size" value="10">
+        <label for="size-small">Small (11 inches)</label><br>
+        <input type="radio" id="size-medium" name="input-size" value="14">
+        <label for="size-medium">Medium (13 inches)</label><br>
+        <input type="radio" id="size-large" name="input-size" value="18">
+        <label for="size-large">Large (17 inches)</label>
+        <h4 class="card-title">Choose amount of cheese:</h4>
+        <select name="cheese" id="input-cheese">
+          <option value="0">Normal</option>
+          <option value="1">Extra</option>
+          <option value="2">Double</option>
+        </select>
+        <h4 class="card-title">Choose toppings:</h4>
+        <h5>Meat</h5>
+        <input type="checkbox" id="topping-canadian-bacon" name="toppings" value="1">
+        <label for="topping-canadian-bacon"> Canadian Bacon</label><br>
+        <input type="checkbox" id="topping-chicken" name="toppings" value="1">
+        <label for="topping-chicken"> Chicken</label><br>
+        <input type="checkbox" id="topping-pepperoni" name="toppings" value="1">
+        <label for="topping-pepperoni"> Pepperoni</label><br>
+        <input type="checkbox" id="topping-sausage" name="toppings" value="1">
+        <label for="topping-sausage"> Sausage</label><br>
+        <h5>Veggies</h5>
+        <input type="checkbox" id="topping-garlic" name="toppings" value="1">
+        <label for="topping-garlic"> Garlic</label><br>
+        <input type="checkbox" id="topping-green-pepers" name="toppings" value="1">
+        <label for="topping-green-pepers"> Green Peppers</label><br>
+        <input type="checkbox" id="topping-mushrooms" name="toppings" value="1">
+        <label for="topping-mushrooms"> Mushrooms</label><br>
+        <input type="checkbox" id="topping-olives" name="toppings" value="1">
+        <label for="topping-olives"> Olives</label><br>
+        <input type="checkbox" id="topping-onions" name="toppings" value="1">
+        <label for="topping-onions"> Onions</label><br>
+        <input type="checkbox" id="topping-pineapple" name="toppings" value="1">
+        <label for="topping-pineapple"> Pineapple</label><br>
+        <button id="pizza-submit" type="submit" class="btn btn-primary">Submit</button> 
+      </form>
     </div>
   </section>
   <section class="card bg-secondary mb-3">
@@ -67,6 +70,10 @@
         <h5 class="card-text">Toppings</h5>
         <p class="pizza-toppings-cart"></p>
       </div>
+      <h6 class="card-title">Subtotal:</h6>
+      <h6 class="card-title">Tax:</h6>
+      <h6 class="card-title">Delivery fee:</h6>
+      <h6 class="card-title">Price:</h6>
     </div>
   </section>
 </body>
