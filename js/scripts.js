@@ -10,6 +10,7 @@ function Cart(salesTax, deliveryFee) {
 }
 
 Cart.prototype.calculatePrice = function() {
+  this.subTotal = 0;
   for (i = 0; i < this.pizzas.length; i++) {
     this.subTotal += this.pizzas[i].price;
   }
@@ -26,6 +27,7 @@ function Pizza(size, cheese, toppings) {
 }
 
 Pizza.prototype.calculatePrice = function() {
+  this.price = 0;
   this.price += this.size.value;
   this.price += this.cheese.value;
   for (i = 0; i < this.toppings.length; i++) {
@@ -41,7 +43,7 @@ function PizzaOption (name, value) {
 //UI logic
 function displayCart(cart) {
   $(".cart-container").html("");
-  for (i = 0; i < cart.pizzas.length; i++) {
+  for (i = cart.pizzas.length - 1; i >= 0; i--) {
     $(".cart-container").prepend($(".pizza-cart-container").last().clone());
     $(".pizza-name-cart").first().text("Pizza #" + (i + 1));
     $(".pizza-size-cart").first().text(cart.pizzas[i].size.name);

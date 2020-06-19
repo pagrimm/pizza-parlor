@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+  color: #e33b7e;
+}
+
+h1 i {
+  color: #99e64c
+}
+
+.bg-dark-purple {
+  background-color: #2f293d
+}
+
+.bg-dark-blue {
+  background-color: #201f2e;
+}
+
+.bg-purple {
+  background-color: #5838a8;
+}
+
+.text-magenta {
+  color: #e33b7e
+}
+
