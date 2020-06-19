@@ -46,7 +46,7 @@ function displayCart(cart) {
   for (i = cart.pizzas.length - 1; i >= 0; i--) {
     $(".cart-container").prepend($(".pizza-cart-container").last().clone());
     $(".pizza-cart-container").first().addClass("cart-hidden");
-    $(".pizza-name-cart").first().text("Pizza #" + (i + 1));
+    $(".pizza-name-cart").first().append(i + 1);
     $(".pizza-size-cart").first().text(cart.pizzas[i].size.name);
     $(".pizza-cheese-cart").first().text(cart.pizzas[i].cheese.name);
     for (n = 0; n < cart.pizzas[i].toppings.length; n++) {
@@ -57,6 +57,7 @@ function displayCart(cart) {
   $(".tax-cart").text(cart.totalTax.toFixed(2));
   $(".delivery-fee-cart").text(cart.deliveryFee.toFixed(2));
   $(".price-cart").text(cart.totalPrice.toFixed(2));
+  $(".cart-shown").hide();
   $(".cart-hidden").show();
 }
 

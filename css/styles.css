@@ -11,12 +11,20 @@ hr {
   margin: 0;
 }
 
+h4 i {
+  margin-right: 10px;
+}
+
 form h4 {
   color: #9085ad;
 }
 
 form h5 {
   margin-bottom: 10px;
+}
+
+form h5 i {
+  margin-right: 10px;
 }
 
 form select {
@@ -63,6 +71,14 @@ i {
 
 .pizza-cart-container {
   display: none;
+}
+
+.pizza-cart-container:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.pizza-cart-container i{
+  color: #e33b7e;
 }
 
 .cart-shown {
