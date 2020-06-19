@@ -5,11 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.css" rel="stylesheet" type = "text/css">
   <link href="css/styles.css" rel="stylesheet" type = "text/css">
+  <script src="https://kit.fontawesome.com/ab4e2358ae.js" crossorigin="anonymous"></script>
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
   <title>Document</title>
 </head>
-<body>
-  
+<body class="container">
+  <header class="jumbotron">
+    <h1><i class="fas fa-pizza-slice"></i> Pizza Mart</h1>
+  </header>
+  <section class="card bg-secondary mb-3">
+    <div class="card-header"><i class="fas fa-pizza-slice"></i> Create Your Pizza</div>
+    <div class="card-body">
+      <h4 class="card-title">Choose a pizza size:</h4>
+      <input type="radio" id="size-small" name="input-size" value="10">
+      <label for="size-small">Small (11 inches)</label><br>
+      <input type="radio" id="size-medium" name="input-size" value="14">
+      <label for="size-medium">Medium (13 inches)</label><br>
+      <input type="radio" id="size-large" name="input-size" value="18">
+      <label for="size-large">Large (17 inches)</label>
+      <h4 class="card-title">Cheese:</h4>
+      <select name="cheese" id="input-cheese">
+        <option value="0">Normal</option>
+        <option value="1">Extra</option>
+        <option value="2">Double</option>
+      </select>
+      <h4 class="card-title">Choose toppings:</h4>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br>
+    </div>
+  </section>
+  <section class="card bg-secondary mb-3">
+    <div class="card-header"><i class="fas fa-pizza-slice"></i> Your Cart</div>
+    <div class="cart-container card-body">
+      <div>
+        <h4 class="card-title">Pizza</h4>
+        <h5 class="card-text">Size</h5>
+        <p class="pizza-size-cart"></p>
+        <h5 class="card-text">Cheese</h5>
+        <p class="pizza-cheese-cart"></p>
+        <h5 class="card-text">Toppings</h5>
+        <p class="pizza-toppings-cart"></p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
