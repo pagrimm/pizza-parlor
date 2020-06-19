@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 h1 {
   text-align: center;
   color: #e33b7e;
@@ -92,7 +96,6 @@ i {
   -webkit-box-shadow: #201f2e;
           box-shadow: #201f2e;
 }
-
 
 .btn-secondary {
   color: #201f2e;

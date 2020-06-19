@@ -82,10 +82,17 @@ $(document).ready(function () {
   $("#pizza-input-form").submit(function (event) {
     event.preventDefault();
     let inputs = getInputs();
+    document.getElementById("pizza-input-form").reset();
     let pizza = new Pizza(inputs[0], inputs[1], inputs[2])
     pizza.calculatePrice();
     cart.pizzas.push(pizza);
     cart.calculatePrice();
     displayCart(cart);
+  });
+  $("#reset-button").click(function () {
+    $(".cart-container").html("");
+    cart = new Cart(salesTax, deliveryFee);
+    $(".cart-hidden").hide();
+    $(".cart-shown").show();
   });
 });
