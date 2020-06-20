@@ -9,6 +9,7 @@ function Cart(salesTax, deliveryFee) {
   this.totalPrice = 0
 }
 
+//prototype method for calculating the subtotal, total tax, and total price of a cart based on the pizzas it contains
 Cart.prototype.calculatePrice = function() {
   this.subTotal = 0;
   for (i = 0; i < this.pizzas.length; i++) {
@@ -26,6 +27,7 @@ function Pizza(size, cheese, toppings) {
   this.price = 0
 }
 
+//prototype method for calculating a pizza's price based on its size and ingredients
 Pizza.prototype.calculatePrice = function() {
   this.price = 0;
   this.price += this.size.value;
@@ -35,12 +37,15 @@ Pizza.prototype.calculatePrice = function() {
   }
 }
 
-function PizzaOption (name, value) {
+
+//PizzaOption constructor
+function PizzaOption(name, value) {
   this.name = name;
   this.value = value;
 }
 
 //UI logic
+//function to display the various contents of the cart object in the cart area of the html
 function displayCart(cart) {
   $(".cart-container").html("");
   for (i = cart.pizzas.length - 1; i >= 0; i--) {
@@ -62,6 +67,7 @@ function displayCart(cart) {
   $(".cart-hidden").show();
 }
 
+//function to get inputs from the form, create new PizzaOption objects from them, and return them in an array
 function getInputs() {
   let inputs = [];
   let size = new PizzaOption($("label[for='" + $("input:radio[name=size]:checked").attr("id") + "']").text(), parseInt($("input:radio[name=size]:checked").val()));
@@ -90,8 +96,8 @@ $(document).ready(function () {
     displayCart(cart);
   });
   $("#reset-button").click(function () {
-    $(".cart-container").html("");
     cart = new Cart(salesTax, deliveryFee);
+    $(".cart-container").html("");
     $(".cart-hidden").hide();
     $(".cart-shown").show();
   });
